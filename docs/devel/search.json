@@ -1,0 +1,312 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BiocHandoff",
+    "section": "",
+    "text": "Package: BiocHandoffAuthors: Vincent Carey [aut, cre]Compiled: 2025-07-22Package version: 0.98.1R version: R version 4.5.1 (2025-06-13)BioC version: 3.22License: MIT + file LICENSE\nWelcome\nThis is the landing page of the BiocBook entitled “BiocHandoff”.\nThis book introduces the reader to tasks required as staff members leave the organization.\nWe prefer a computable book to a static text or spreadsheet so that computations can be included and checked.\nDocker image\nA Docker image built from this repository is available here:\n👉 ghcr.io/vjcitn/biochandoff 🐳\n\n\n\n\n\n\nGet started now 🎉\n\n\n\nYou can get access to all the packages used in this book in &lt; 1 minute, using this command in a terminal:\n\n\n\nbash\n\ndocker run -it ghcr.io/vjcitn/biochandoff:devel R\n\n\n\n\nRStudio Server\nAn RStudio Server instance can be initiated from the Docker image as follows:\n\n\n\nbash\n\ndocker run \\\n    --volume &lt;local_folder&gt;:&lt;destination_folder&gt; \\\n    -e PASSWORD=OHCA \\\n    -p 8787:8787 \\\n    ghcr.io/vjcitn/biochandoff:devel\n\n\nThe initiated RStudio Server instance will be available at https://localhost:8787.\n\nSession info\n\n\n\n\n\n\nClick to expand 👇\n\n\n\n\n\n\nsessioninfo::session_info(\n    installed.packages()[,\"Package\"], \n    include_base = TRUE\n)\n##  ─ Session info ────────────────────────────────────────────────────────────\n##   setting  value\n##   version  R version 4.5.1 (2025-06-13)\n##   os       Ubuntu 24.04.2 LTS\n##   system   x86_64, linux-gnu\n##   ui       X11\n##   language (EN)\n##   collate  C\n##   ctype    en_US.UTF-8\n##   tz       Etc/UTC\n##   date     2025-07-22\n##   pandoc   3.7.0.2 @ /usr/bin/ (via rmarkdown)\n##   quarto   1.6.42 @ /usr/local/bin/quarto\n##  \n##  ─ Packages ────────────────────────────────────────────────────────────────\n##   package        * version date (UTC) lib source\n##   askpass          1.2.1   2024-10-04 [2] RSPM (R 4.5.0)\n##   base           * 4.5.1   2025-06-13 [3] local\n##   base64enc        0.1-3   2015-07-28 [2] RSPM (R 4.5.0)\n##   BiocHandoff      0.98.1  2025-07-22 [1] local\n##   BiocManager      1.30.26 2025-06-05 [2] CRAN (R 4.5.1)\n##   BiocStyle        2.37.0  2025-04-15 [2] Bioconductor 3.22 (R 4.5.0)\n##   BiocVersion      3.22.0  2025-04-15 [2] Bioconductor 3.22 (R 4.5.1)\n##   bookdown         0.43    2025-04-15 [2] RSPM (R 4.5.0)\n##   boot             1.3-31  2024-08-28 [3] CRAN (R 4.5.1)\n##   brew             1.0-10  2023-12-16 [2] RSPM (R 4.5.0)\n##   brio             1.1.5   2024-04-24 [2] RSPM (R 4.5.0)\n##   bslib            0.9.0   2025-01-30 [2] RSPM (R 4.5.0)\n##   cachem           1.1.0   2024-05-16 [2] RSPM (R 4.5.0)\n##   callr            3.7.6   2024-03-25 [2] RSPM (R 4.5.0)\n##   class            7.3-23  2025-01-01 [3] CRAN (R 4.5.1)\n##   cli              3.6.5   2025-04-23 [2] RSPM (R 4.5.0)\n##   clipr            0.8.0   2022-02-22 [2] RSPM (R 4.5.0)\n##   cluster          2.1.8.1 2025-03-12 [3] CRAN (R 4.5.1)\n##   codetools        0.2-20  2024-03-31 [3] CRAN (R 4.5.1)\n##   commonmark       2.0.0   2025-07-07 [2] RSPM (R 4.5.0)\n##   compiler         4.5.1   2025-06-13 [3] local\n##   cpp11            0.5.2   2025-03-03 [2] RSPM (R 4.5.0)\n##   crayon           1.5.3   2024-06-20 [2] RSPM (R 4.5.0)\n##   credentials      2.0.2   2024-10-04 [2] RSPM (R 4.5.0)\n##   curl             6.4.0   2025-06-22 [2] RSPM (R 4.5.0)\n##   datasets       * 4.5.1   2025-06-13 [3] local\n##   desc             1.4.3   2023-12-10 [2] RSPM (R 4.5.0)\n##   devtools         2.4.5   2022-10-11 [2] RSPM (R 4.5.0)\n##   diffobj          0.3.6   2025-04-21 [2] RSPM (R 4.5.0)\n##   digest           0.6.37  2024-08-19 [2] RSPM (R 4.5.0)\n##   docopt           0.7.2   2025-03-25 [2] RSPM (R 4.5.1)\n##   downlit          0.4.4   2024-06-10 [2] RSPM (R 4.5.0)\n##   ellipsis         0.3.2   2021-04-29 [2] RSPM (R 4.5.0)\n##   evaluate         1.0.4   2025-06-18 [2] RSPM (R 4.5.0)\n##   fansi            1.0.6   2023-12-08 [2] RSPM (R 4.5.0)\n##   fastmap          1.2.0   2024-05-15 [2] RSPM (R 4.5.0)\n##   fontawesome      0.5.3   2024-11-16 [2] RSPM (R 4.5.0)\n##   foreign          0.8-90  2025-03-31 [3] CRAN (R 4.5.1)\n##   fs               1.6.6   2025-04-12 [2] RSPM (R 4.5.0)\n##   gert             2.1.5   2025-03-25 [2] RSPM (R 4.5.0)\n##   gh               1.5.0   2025-05-26 [2] RSPM (R 4.5.0)\n##   gitcreds         0.1.2   2022-09-08 [2] RSPM (R 4.5.0)\n##   glue             1.8.0   2024-09-30 [2] RSPM (R 4.5.0)\n##   graphics       * 4.5.1   2025-06-13 [3] local\n##   grDevices      * 4.5.1   2025-06-13 [3] local\n##   grid             4.5.1   2025-06-13 [3] local\n##   highr            0.11    2024-05-26 [2] RSPM (R 4.5.0)\n##   htmltools        0.5.8.1 2024-04-04 [2] RSPM (R 4.5.0)\n##   htmlwidgets      1.6.4   2023-12-06 [2] RSPM (R 4.5.0)\n##   httpuv           1.6.16  2025-04-16 [2] RSPM (R 4.5.0)\n##   httr2            1.2.0   2025-07-13 [2] RSPM (R 4.5.0)\n##   ini              0.3.1   2018-05-20 [2] RSPM (R 4.5.0)\n##   jquerylib        0.1.4   2021-04-26 [2] RSPM (R 4.5.0)\n##   jsonlite         2.0.0   2025-03-27 [2] RSPM (R 4.5.0)\n##   KernSmooth       2.23-26 2025-01-01 [3] CRAN (R 4.5.1)\n##   knitr            1.50    2025-03-16 [2] RSPM (R 4.5.0)\n##   later            1.4.2   2025-04-08 [2] RSPM (R 4.5.0)\n##   lattice          0.22-7  2025-04-02 [3] CRAN (R 4.5.1)\n##   lifecycle        1.0.4   2023-11-07 [2] RSPM (R 4.5.0)\n##   littler          0.3.21  2025-03-25 [2] RSPM (R 4.5.1)\n##   magrittr         2.0.3   2022-03-30 [2] RSPM (R 4.5.0)\n##   MASS             7.3-65  2025-02-28 [3] CRAN (R 4.5.1)\n##   Matrix           1.7-3   2025-03-11 [3] CRAN (R 4.5.1)\n##   memoise          2.0.1   2021-11-26 [2] RSPM (R 4.5.0)\n##   methods        * 4.5.1   2025-06-13 [3] local\n##   mgcv             1.9-3   2025-04-04 [3] CRAN (R 4.5.1)\n##   mime             0.13    2025-03-17 [2] RSPM (R 4.5.0)\n##   miniUI           0.1.2   2025-04-17 [2] RSPM (R 4.5.0)\n##   nlme             3.1-168 2025-03-31 [3] CRAN (R 4.5.1)\n##   nnet             7.3-20  2025-01-01 [3] CRAN (R 4.5.1)\n##   openssl          2.3.3   2025-05-26 [2] RSPM (R 4.5.0)\n##   parallel         4.5.1   2025-06-13 [3] local\n##   pillar           1.11.0  2025-07-04 [2] RSPM (R 4.5.0)\n##   pkgbuild         1.4.8   2025-05-26 [2] RSPM (R 4.5.0)\n##   pkgconfig        2.0.3   2019-09-22 [2] RSPM (R 4.5.0)\n##   pkgdown          2.1.3   2025-05-25 [2] RSPM (R 4.5.0)\n##   pkgload          1.4.0   2024-06-28 [2] RSPM (R 4.5.0)\n##   praise           1.0.0   2015-08-11 [2] RSPM (R 4.5.0)\n##   preprocessCore   1.71.2  2025-06-22 [2] Bioconductor 3.22 (R 4.5.1)\n##   prettyunits      1.2.0   2023-09-24 [2] RSPM (R 4.5.0)\n##   processx         3.8.6   2025-02-21 [2] RSPM (R 4.5.0)\n##   profvis          0.4.0   2024-09-20 [2] RSPM (R 4.5.0)\n##   promises         1.3.3   2025-05-29 [2] RSPM (R 4.5.0)\n##   ps               1.9.1   2025-04-12 [2] RSPM (R 4.5.0)\n##   purrr            1.1.0   2025-07-10 [2] RSPM (R 4.5.0)\n##   R6               2.6.1   2025-02-15 [2] RSPM (R 4.5.0)\n##   ragg             1.4.0   2025-04-10 [2] RSPM (R 4.5.0)\n##   rappdirs         0.3.3   2021-01-31 [2] RSPM (R 4.5.0)\n##   rcmdcheck        1.4.0   2021-09-27 [2] RSPM (R 4.5.0)\n##   Rcpp             1.1.0   2025-07-02 [2] RSPM (R 4.5.0)\n##   remotes          2.5.0   2024-03-17 [2] RSPM (R 4.5.0)\n##   rlang            1.1.6   2025-04-11 [2] RSPM (R 4.5.0)\n##   rmarkdown        2.29    2024-11-04 [2] RSPM (R 4.5.0)\n##   roxygen2         7.3.2   2024-06-28 [2] RSPM (R 4.5.0)\n##   rpart            4.1.24  2025-01-07 [3] CRAN (R 4.5.1)\n##   rprojroot        2.1.0   2025-07-12 [2] RSPM (R 4.5.0)\n##   rstudioapi       0.17.1  2024-10-22 [2] RSPM (R 4.5.0)\n##   rversions        2.1.2   2022-08-31 [2] RSPM (R 4.5.0)\n##   sass             0.4.10  2025-04-11 [2] RSPM (R 4.5.0)\n##   sessioninfo      1.2.3   2025-02-05 [2] RSPM (R 4.5.0)\n##   shiny            1.11.1  2025-07-03 [2] RSPM (R 4.5.0)\n##   sourcetools      0.1.7-1 2023-02-01 [2] RSPM (R 4.5.0)\n##   spatial          7.3-18  2025-01-01 [3] CRAN (R 4.5.1)\n##   splines          4.5.1   2025-06-13 [3] local\n##   stats          * 4.5.1   2025-06-13 [3] local\n##   stats4           4.5.1   2025-06-13 [3] local\n##   stringi          1.8.7   2025-03-27 [2] RSPM (R 4.5.0)\n##   stringr          1.5.1   2023-11-14 [2] RSPM (R 4.5.0)\n##   survival         3.8-3   2024-12-17 [3] CRAN (R 4.5.1)\n##   sys              3.4.3   2024-10-04 [2] RSPM (R 4.5.0)\n##   systemfonts      1.2.3   2025-04-30 [2] RSPM (R 4.5.0)\n##   tcltk            4.5.1   2025-06-13 [3] local\n##   testthat         3.2.3   2025-01-13 [2] RSPM (R 4.5.0)\n##   textshaping      1.0.1   2025-05-01 [2] RSPM (R 4.5.0)\n##   tibble           3.3.0   2025-06-08 [2] RSPM (R 4.5.0)\n##   tinytex          0.57    2025-04-15 [2] RSPM (R 4.5.0)\n##   tools            4.5.1   2025-06-13 [3] local\n##   urlchecker       1.0.1   2021-11-30 [2] RSPM (R 4.5.0)\n##   usethis          3.1.0   2024-11-26 [2] RSPM (R 4.5.0)\n##   utf8             1.2.6   2025-06-08 [2] RSPM (R 4.5.0)\n##   utils          * 4.5.1   2025-06-13 [3] local\n##   vctrs            0.6.5   2023-12-01 [2] RSPM (R 4.5.0)\n##   waldo            0.6.2   2025-07-11 [2] RSPM (R 4.5.0)\n##   whisker          0.4.1   2022-12-05 [2] RSPM (R 4.5.0)\n##   withr            3.0.2   2024-10-28 [2] RSPM (R 4.5.0)\n##   xfun             0.52    2025-04-02 [2] RSPM (R 4.5.0)\n##   xml2             1.3.8   2025-03-14 [2] RSPM (R 4.5.0)\n##   xopen            1.0.1   2024-04-25 [2] RSPM (R 4.5.0)\n##   xtable           1.8-4   2019-04-21 [2] RSPM (R 4.5.0)\n##   yaml             2.3.10  2024-07-26 [2] RSPM (R 4.5.0)\n##   zip              2.3.3   2025-05-13 [2] RSPM (R 4.5.0)\n##  \n##   [1] /tmp/RtmpyW8nr4/Rinst8d2a4ce58c\n##   [2] /usr/local/lib/R/site-library\n##   [3] /usr/local/lib/R/library\n##   * ── Packages attached to the search path.\n##  \n##  ───────────────────────────────────────────────────────────────────────────\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-debug-update-release-anvil-containers.html",
+    "href": "pages/maintain-debug-update-release-anvil-containers.html",
+    "title": "1  Maintain-Debug-Update-Release AnVIL containers",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maintain-Debug-Update-Release AnVIL containers</span>"
+    ]
+  },
+  {
+    "objectID": "pages/make-prs-to-leonardo-and-terra-docker-repositories.html",
+    "href": "pages/make-prs-to-leonardo-and-terra-docker-repositories.html",
+    "title": "2  Make PRs to Leonardo and terra-docker repositories",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Make PRs to Leonardo and terra-docker repositories</span>"
+    ]
+  },
+  {
+    "objectID": "pages/test-debug-new-containers-in-dev-terra.html",
+    "href": "pages/test-debug-new-containers-in-dev-terra.html",
+    "title": "3  Test-Debug new containers in Dev Terra",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Test-Debug new containers in Dev Terra</span>"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-debug-update-release-regular-bioconductor-containers.html",
+    "href": "pages/maintain-debug-update-release-regular-bioconductor-containers.html",
+    "title": "4  Maintain-Debug-Update-Release regular Bioconductor containers",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Maintain-Debug-Update-Release regular Bioconductor containers</span>"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-stack-code-for-building-bioconductor-binaries-up-to-date.html",
+    "href": "pages/maintain-stack-code-for-building-bioconductor-binaries-up-to-date.html",
+    "title": "5  Maintain stack-code for building Bioconductor binaries up to date",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Maintain stack-code for building Bioconductor binaries up to date</span>"
+    ]
+  },
+  {
+    "objectID": "pages/regularly-build-binaries-for-bioconductor-containers.html",
+    "href": "pages/regularly-build-binaries-for-bioconductor-containers.html",
+    "title": "6  Regularly build binaries for Bioconductor containers",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Regularly build binaries for Bioconductor containers</span>"
+    ]
+  },
+  {
+    "objectID": "pages/regularly-build-binaries-for-anvil-containers.html",
+    "href": "pages/regularly-build-binaries-for-anvil-containers.html",
+    "title": "7  Regularly build binaries for AnVIL containers",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Regularly build binaries for AnVIL containers</span>"
+    ]
+  },
+  {
+    "objectID": "pages/coordinate-with-broad-for-prs-review-and-propagation.html",
+    "href": "pages/coordinate-with-broad-for-prs-review-and-propagation.html",
+    "title": "8  Coordinate with Broad for PRs review and propagation",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coordinate with Broad for PRs review and propagation</span>"
+    ]
+  },
+  {
+    "objectID": "pages/present-at-po-pm-monthly-anvil-meeting.html",
+    "href": "pages/present-at-po-pm-monthly-anvil-meeting.html",
+    "title": "9  Present at PO-PM monthly AnVIL meeting",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Present at PO-PM monthly AnVIL meeting</span>"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-update-workshop-bioconductor-org-platform-for-running-bioconductor-workshops.html",
+    "href": "pages/maintain-update-workshop-bioconductor-org-platform-for-running-bioconductor-workshops.html",
+    "title": "10  Maintain-Update workshop-bioconductor-org platform for running Bioconductor workshops",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Maintain-Update workshop-bioconductor-org platform for running Bioconductor workshops</span>"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-a-bioconductor-identity-authentication-authorization-service-server.html",
+    "href": "pages/maintain-a-bioconductor-identity-authentication-authorization-service-server.html",
+    "title": "11  Maintain a Bioconductor identity authentication-authorization service-server",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maintain a Bioconductor identity authentication-authorization service-server</span>"
+    ]
+  },
+  {
+    "objectID": "pages/present-standup-at-weekly-anvil-tech-meeting.html",
+    "href": "pages/present-standup-at-weekly-anvil-tech-meeting.html",
+    "title": "12  Present standup at weekly AnVIL tech meeting",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Present standup at weekly AnVIL tech meeting</span>"
+    ]
+  },
+  {
+    "objectID": "pages/coordinate-other-anvil-meetings-conversations-and-quarterly-presentation-for-tech-meeting.html",
+    "href": "pages/coordinate-other-anvil-meetings-conversations-and-quarterly-presentation-for-tech-meeting.html",
+    "title": "13  Coordinate other AnVIL meetings-conversations and quarterly presentation for tech meeting",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Coordinate other AnVIL meetings-conversations and quarterly presentation for tech meeting</span>"
+    ]
+  },
+  {
+    "objectID": "pages/update-smartsheets-and-coordinate-half-yearly-reports-with-stephen.html",
+    "href": "pages/update-smartsheets-and-coordinate-half-yearly-reports-with-stephen.html",
+    "title": "14  Update smartsheets and coordinate half-yearly reports with Stephen",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Update smartsheets and coordinate half-yearly reports with Stephen</span>"
+    ]
+  },
+  {
+    "objectID": "pages/maintain-anvil-documentation-and-coordinate-with-outreach-team.html",
+    "href": "pages/maintain-anvil-documentation-and-coordinate-with-outreach-team.html",
+    "title": "15  Maintain AnVIL documentation and coordinate with outreach team",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Maintain AnVIL documentation and coordinate with outreach team</span>"
+    ]
+  },
+  {
+    "objectID": "pages/designing-and-prototyping-runiverse-transition.html",
+    "href": "pages/designing-and-prototyping-runiverse-transition.html",
+    "title": "16  Designing and prototyping runiverse transition",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Designing and prototyping runiverse transition</span>"
+    ]
+  },
+  {
+    "objectID": "pages/access-jetstream-osn-allocation-management.html",
+    "href": "pages/access-jetstream-osn-allocation-management.html",
+    "title": "17  ACCESS -Jetstream - OSN- allocation management",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>ACCESS -Jetstream - OSN- allocation management</span>"
+    ]
+  },
+  {
+    "objectID": "pages/access-resources-management-networking-compute-firewalls-networks-subnets-vms-volumes.html",
+    "href": "pages/access-resources-management-networking-compute-firewalls-networks-subnets-vms-volumes.html",
+    "title": "18  ACCESS resources management - Networking - Compute -Firewalls-networks-subnets-VMs-Volumes",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>ACCESS resources management - Networking - Compute -Firewalls-networks-subnets-VMs-Volumes</span>"
+    ]
+  },
+  {
+    "objectID": "pages/access-resources-management-js2-kubernetes-clusters.html",
+    "href": "pages/access-resources-management-js2-kubernetes-clusters.html",
+    "title": "19  ACCESS resources management - JS2 Kubernetes clusters",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>ACCESS resources management - JS2 Kubernetes clusters</span>"
+    ]
+  },
+  {
+    "objectID": "pages/access-resources-management-storage-osn-jetstream2-object-storage-.html",
+    "href": "pages/access-resources-management-storage-osn-jetstream2-object-storage-.html",
+    "title": "20  ACCESS resources management - Storage -OSN Jetstream2 Object Storage-",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>ACCESS resources management - Storage -OSN  Jetstream2 Object Storage-</span>"
+    ]
+  },
+  {
+    "objectID": "pages/coordinating-with-galaxy-team-for-bioc-galaxy-shared-bucket-in-sydney-au-from-aws-open-data-program.html",
+    "href": "pages/coordinating-with-galaxy-team-for-bioc-galaxy-shared-bucket-in-sydney-au-from-aws-open-data-program.html",
+    "title": "21  Coordinating with Galaxy team for Bioc-Galaxy Shared bucket in Sydney AU from AWS Open Data program",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Coordinating with Galaxy team for Bioc-Galaxy Shared bucket in Sydney AU from AWS Open Data program</span>"
+    ]
+  },
+  {
+    "objectID": "pages/rwasm-webr-building-and-hosting-webr-bioconductor-org.html",
+    "href": "pages/rwasm-webr-building-and-hosting-webr-bioconductor-org.html",
+    "title": "22  RWASM-Webr building and hosting webr-bioconductor-org",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>RWASM-Webr building and hosting webr-bioconductor-org</span>"
+    ]
+  },
+  {
+    "objectID": "pages/bioc2u-building-and-hosting.html",
+    "href": "pages/bioc2u-building-and-hosting.html",
+    "title": "23  Bioc2u building and hosting",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Bioc2u building and hosting</span>"
+    ]
+  },
+  {
+    "objectID": "pages/bioconductor-hubs-ingestion-code-maintenance-hubsingest-bioconductor-org.html",
+    "href": "pages/bioconductor-hubs-ingestion-code-maintenance-hubsingest-bioconductor-org.html",
+    "title": "24  Bioconductor hubs ingestion code maintenance -hubsingest-bioconductor-org",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Bioconductor hubs ingestion code maintenance -hubsingest-bioconductor-org</span>"
+    ]
+  },
+  {
+    "objectID": "pages/bioconductor-hubs-ingest-package-biochubsingestr.html",
+    "href": "pages/bioconductor-hubs-ingest-package-biochubsingestr.html",
+    "title": "25  Bioconductor hubs ingest package -BiocHubsIngestR",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Bioconductor hubs ingest package -BiocHubsIngestR</span>"
+    ]
+  },
+  {
+    "objectID": "pages/kubernetes-cluster-launch-board-k8slaunch-bioconductor-org-hosting.html",
+    "href": "pages/kubernetes-cluster-launch-board-k8slaunch-bioconductor-org-hosting.html",
+    "title": "26  Kubernetes cluster launch board -k8slaunch-bioconductor-org- hosting",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Kubernetes cluster launch board -k8slaunch-bioconductor-org- hosting</span>"
+    ]
+  },
+  {
+    "objectID": "pages/status-page-maintenance-dev-status-bioconductor-org.html",
+    "href": "pages/status-page-maintenance-dev-status-bioconductor-org.html",
+    "title": "27  Status page maintenance -dev-status-bioconductor-org",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Status page maintenance -dev-status-bioconductor-org</span>"
+    ]
+  },
+  {
+    "objectID": "pages/zulip-and-other-redirect-endpoints-currently-running-in-nginx-on-js2-kubernetes-.html",
+    "href": "pages/zulip-and-other-redirect-endpoints-currently-running-in-nginx-on-js2-kubernetes-.html",
+    "title": "28  Zulip and other redirect endpoints -currently running in nginx on JS2 kubernetes-",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Zulip and other redirect endpoints -currently running in nginx on JS2 kubernetes-</span>"
+    ]
+  },
+  {
+    "objectID": "pages/bioconductor-helm-chart-maintenance-for-kubernetes-deployments-.html",
+    "href": "pages/bioconductor-helm-chart-maintenance-for-kubernetes-deployments-.html",
+    "title": "29  Bioconductor Helm Chart maintenance -for Kubernetes deployments-",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Bioconductor Helm Chart maintenance -for Kubernetes deployments-</span>"
+    ]
+  },
+  {
+    "objectID": "pages/moving-release-to-archive-after-official-release.html",
+    "href": "pages/moving-release-to-archive-after-official-release.html",
+    "title": "30  Moving release to archive after official release",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Moving release to archive after official release</span>"
+    ]
+  }
+]

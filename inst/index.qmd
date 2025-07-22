@@ -25,9 +25,12 @@ intro <- tryCatch(
 
 # Welcome {-}
 
-This is the landing page of the `BiocBook` entitled *...*.  
+This is the landing page of the `BiocBook` entitled "BiocHandoff".
 
-This book introduces the reader to *...*.  
+This book introduces the reader to tasks required as staff members leave the organization.
+
+We prefer a computable book to a static text or spreadsheet so that computations
+can be included and checked.
 
 # Docker image {-}
 

@@ -2,6 +2,36 @@ book:
   title: "BiocHandoff"
   chapters:
     - index.qmd
+    - pages/maintain-debug-update-release-anvil-containers.qmd
+    - pages/make-prs-to-leonardo-and-terra-docker-repositories.qmd
+    - pages/test-debug-new-containers-in-dev-terra.qmd
+    - pages/maintain-debug-update-release-regular-bioconductor-containers.qmd
+    - pages/maintain-stack-code-for-building-bioconductor-binaries-up-to-date.qmd
+    - pages/regularly-build-binaries-for-bioconductor-containers.qmd
+    - pages/regularly-build-binaries-for-anvil-containers.qmd
+    - pages/coordinate-with-broad-for-prs-review-and-propagation.qmd
+    - pages/present-at-po-pm-monthly-anvil-meeting.qmd
+    - pages/maintain-update-workshop-bioconductor-org-platform-for-running-bioconductor-workshops.qmd
+    - pages/maintain-a-bioconductor-identity-authentication-authorization-service-server.qmd
+    - pages/present-standup-at-weekly-anvil-tech-meeting.qmd
+    - pages/coordinate-other-anvil-meetings-conversations-and-quarterly-presentation-for-tech-meeting.qmd
+    - pages/update-smartsheets-and-coordinate-half-yearly-reports-with-stephen.qmd
+    - pages/maintain-anvil-documentation-and-coordinate-with-outreach-team.qmd
+    - pages/designing-and-prototyping-runiverse-transition.qmd
+    - pages/access-jetstream-osn-allocation-management.qmd
+    - pages/access-resources-management-networking-compute-firewalls-networks-subnets-vms-volumes.qmd
+    - pages/access-resources-management-js2-kubernetes-clusters.qmd
+    - pages/access-resources-management-storage-osn-jetstream2-object-storage-.qmd
+    - pages/coordinating-with-galaxy-team-for-bioc-galaxy-shared-bucket-in-sydney-au-from-aws-open-data-program.qmd
+    - pages/rwasm-webr-building-and-hosting-webr-bioconductor-org.qmd
+    - pages/bioc2u-building-and-hosting.qmd
+    - pages/bioconductor-hubs-ingestion-code-maintenance-hubsingest-bioconductor-org.qmd
+    - pages/bioconductor-hubs-ingest-package-biochubsingestr.qmd
+    - pages/kubernetes-cluster-launch-board-k8slaunch-bioconductor-org-hosting.qmd
+    - pages/status-page-maintenance-dev-status-bioconductor-org.qmd
+    - pages/zulip-and-other-redirect-endpoints-currently-running-in-nginx-on-js2-kubernetes-.qmd
+    - pages/bioconductor-helm-chart-maintenance-for-kubernetes-deployments-.qmd
+    - pages/moving-release-to-archive-after-official-release.qmd
   cover-image: assets/cover.png
   favicon: assets/favicon.png
   sidebar: 

@@ -1,0 +1,1 @@
+# Zulip and other redirect endpoints -currently running in nginx on JS2 kubernetes-

@@ -1,1 +1,3 @@
 # Designing and prototyping runiverse transition
+
+Much information at this [google doc](https://docs.google.com/document/d/1KyWlP7uv6siMGTnpfJa98kAc3WM3spamrMdAAUKJJc0/edit?usp=sharing)
